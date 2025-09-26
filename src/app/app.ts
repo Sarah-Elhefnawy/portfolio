@@ -18,12 +18,15 @@ export class App {
   private setBackgroundImage(): void {
     const body = this.elementRef.nativeElement.ownerDocument.body;
     body.style.backgroundImage = "url('/images/aesthetic-background-with-pink-neon-led-light-effect.jpg')";
+    body.style.backgroundImage = "url('/images/aesthetic-background-with-pink-neon-led-light-effectt.jpg')";
+    // body.style.backgroundImage = "url('/images/abstract-gradient-neon-lights.jpg')";
     body.style.backgroundRepeat = 'no-repeat';
     body.style.backgroundPosition = 'center';
     body.style.backgroundSize = 'cover';
-    body.style.minHeight = '100vh';
+    // body.style.minHeight = '100vh';
     body.style.margin = '0';
-    body.style.backgroundAttachment = 'fixed';
+    // body.style.backgroundAttachment = 'fixed';
+    body.style.backgroundAttachment = 'scroll';
   }
 
   ngOnInit(): void {
