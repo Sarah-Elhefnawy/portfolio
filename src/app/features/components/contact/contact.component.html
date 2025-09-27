@@ -1,4 +1,70 @@
-<section class="text-white">
-    <p>contact works!</p>
+<section class="text-white md:space-y-14 py-8">
+    <div class="pb-16">
+        <h1 class="font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-tight">
+            Get in touch</h1>
+        <p class="text-base text-gray-400 sm:text-lg md:text-xl lg:text-2xl leading-relaxed">Let's build something
+            awsome.</p>
+    </div>
 
+    <div class="rounded-lg w-full border border-gray-700 bg-neutral-900 flex flex-col items-center">
+        <div class="relative border-b border-gray-700 w-full py-3">
+            <!-- Circles on the far left -->
+            <div class="absolute left-3 top-1/2 transform -translate-y-1/2 flex space-x-2">
+                <div class="rounded-full w-4 h-4 bg-red-500"></div>
+                <div class="rounded-full w-4 h-4 bg-yellow-500"></div>
+                <div class="rounded-full w-4 h-4 bg-green-500"></div>
+            </div>
+            <!-- Centered title -->
+            <h2 class="text-lg font-semibold text-center">New Message</h2>
+        </div>
+        <div class="space-y-6 w-full max-w-3xl my-6 px-6">
+            <!-- Container for all form fields with grid -->
+            <div class="grid grid-cols-[auto_1fr] items-center gap-4">
+                <!-- Email field -->
+                <label for="email" class="text-sm font-medium text-gray-300 whitespace-nowrap">Your Email:</label>
+                <input type="email" id="email"
+                    class="bg-neutral-800 text-sm rounded-lg w-full p-3 placeholder-gray-400 border-0"
+                    placeholder="Enter your email address" required />
+
+                <!-- Name field -->
+                <label for="name" class="text-sm font-medium text-gray-300 whitespace-nowrap">Your Name:</label>
+                <input type="text" id="name"
+                    class="bg-neutral-800 text-sm rounded-lg w-full p-3 placeholder-gray-400 border-0"
+                    placeholder="Enter your name" required />
+
+                <!-- Subject field -->
+                <label for="subject" class="text-sm font-medium text-gray-300 whitespace-nowrap">Subject:</label>
+                <input type="text" id="subject"
+                    class="bg-neutral-800 text-sm rounded-lg w-full p-3 placeholder-gray-400 border-0"
+                    placeholder="Enter the subject" required />
+            </div>
+
+            <!-- Message field - textarea (stacked since it's larger) -->
+            <div class="flex flex-col gap-2">
+                <label for="message" class="text-sm font-medium text-gray-300">Your Message:</label>
+                <textarea id="message" rows="4"
+                    class="bg-neutral-800 text-sm rounded-lg w-full p-3 placeholder-gray-400 border-0"
+                    placeholder="Write your message here..."></textarea>
+            </div>
+
+            <div class="w-full flex justify-end">
+                <button type="submit"
+                    class="w-fit inset-shadow-sm inset-shadow-neutral-500/50 bg-neutral-800 hover:bg-neutral-700 text-white cursor-pointer font-medium rounded-lg py-3 px-6 transition-colors duration-200">
+                    Send
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-gray-300 text-4xl flex flex-row justify-center items-center space-x-6">
+        <a href="mailto:sarahelhefnawy0@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/sarah-elhefnawy/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://www.github.com/Sarah-Elhefnawy" target="_blank">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    </div>
 </section>
