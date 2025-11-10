@@ -1,4 +1,124 @@
 <section class="text-white md:space-y-14 py-8">
+  @if(ready == false){
+
+  <!-- Headers -->
+  <div role="status" class="animate-pulse py-8">
+    <div
+      class="h-2.5 bg-neutral-700/50 rounded-full max-w-[640px] mb-2.5"
+    ></div>
+    <div class="h-2.5 bg-neutral-700/50 rounded-full max-w-[540px]"></div>
+    <span class="sr-only">Loading...</span>
+  </div>
+
+  <!-- Content -->
+  @for(item of [0,0,0,0,0];track $index){
+  <div
+    role="status"
+    class="animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center w-full rounded-2xl p-8 border border-neutral-700/50"
+  >
+    <div class="w-full">
+      <div class="h-2.5 bg-neutral-600/50 rounded-full w-48 mb-4"></div>
+      <div
+        class="h-2 bg-neutral-600/50 rounded-full max-w-[480px] mb-2.5"
+      ></div>
+      <div class="h-2 bg-neutral-600/50 rounded-full mb-2.5"></div>
+      <div
+        class="h-2 bg-neutral-600/50 rounded-full max-w-[440px] mb-2.5"
+      ></div>
+      <div
+        class="h-2 bg-neutral-600/50 rounded-full max-w-[460px] mb-2.5"
+      ></div>
+      <div class="h-2 bg-neutral-600/50 rounded-full max-w-[360px]"></div>
+    </div>
+    <div
+      class="flex items-center justify-center w-full h-48 bg-neutral-700/50 rounded-sm sm:w-96"
+    >
+      <svg
+        class="w-10 h-10 text-neutral-600/50"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 20 18"
+      >
+        <path
+          d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z"
+        />
+      </svg>
+    </div>
+    <span class="sr-only">Loading...</span>
+  </div>
+  }
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+    @for(item of [0,0];track $index){
+    <div
+      role="status"
+      class="w-full rounded-2xl p-8 border border-neutral-700/50 animate-pulse"
+    >
+      <div class="h-2.5 bg-neutral-600/50 rounded-full w-48 mb-4"></div>
+      <div class="h-2 bg-neutral-600/50 rounded-full mb-2.5"></div>
+      <div class="h-2 bg-neutral-600/50 rounded-full mb-2.5"></div>
+      <div class="h-2.5 bg-neutral-600/50 rounded-full w-48 mb-4"></div>
+      <div class="h-2 bg-neutral-600/50 rounded-full mb-2.5"></div>
+      <div class="h-2 bg-neutral-600/50 rounded-full mb-2.5"></div>
+      <div class="h-2.5 bg-neutral-600/50 rounded-full w-48 mb-4"></div>
+      <div class="h-2 bg-neutral-600/50 rounded-full mb-2.5"></div>
+      <div class="h-2 bg-neutral-600/50 rounded-full mb-2.5"></div>
+      <span class="sr-only">Loading...</span>
+    </div>
+    }
+  </div>
+
+  <div
+    role="status"
+    class="animate-pulse w-full rounded-2xl p-8 border border-neutral-700/50 md:flex md:items-center"
+  >
+    <div class="w-full">
+      <div class="h-2.5 bg-neutral-600/50 rounded-full w-48 mb-4"></div>
+      <div
+        class="h-2 bg-neutral-600/50 rounded-full max-w-[480px] mb-2.5"
+      ></div>
+      <div class="h-2 bg-neutral-600/50 rounded-full mb-2.5"></div>
+      <div
+        class="h-2 bg-neutral-600/50 rounded-full max-w-[440px] mb-2.5"
+      ></div>
+      <div
+        class="h-2 bg-neutral-600/50 rounded-full max-w-[460px] mb-2.5"
+      ></div>
+      <div class="h-2 bg-neutral-600/50 rounded-full max-w-[360px]"></div>
+    </div>
+    <div
+      class="flex items-center justify-center w-full h-48 bg-neutral-700/50 rounded-sm sm:w-96"
+    >
+      <svg
+        class="w-10 h-10 text-neutral-600/50"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 20 18"
+      >
+        <path
+          d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z"
+        />
+      </svg>
+    </div>
+    <span class="sr-only">Loading...</span>
+  </div>
+
+  <!-- Your Project Goes Here -->
+  <div
+    role="status"
+    class="w-full rounded-2xl p-8 border border-neutral-700/50 animate-pulse"
+  >
+    <div
+      class="h-2.5 bg-neutral-600/50 rounded-full max-w-[640px] mb-2.5 mx-auto"
+    ></div>
+    <div class="h-2 bg-neutral-600/50 rounded-full max-w-[540px] mx-auto"></div>
+    <span class="sr-only">Loading...</span>
+  </div>
+
+  }@else {
+
   <div class="pb-16">
     <h1
       class="font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-tight"
@@ -693,6 +813,7 @@
         </div>
       </div>
 
+      <!-- Your Project Goes Here -->
       <div class="flex items-center justify-center w-full">
         <div
           for="dropzone-file"
@@ -706,17 +827,18 @@
             <p class="text-gray-300 leading-relaxed mb-6">
               Let's turn your idea into a visual reality
             </p>
-            <button
+            <a
               routerLink="/contact"
               type="button"
               class="w-fit cursor-pointer bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-800 hover:to-purple-700 shadow-lg hover:shadow-indigo-800/50 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-xl text-sm px-8 py-3.5 text-center inline-flex items-center justify-center transition-all duration-300 transform hover:scale-105"
             >
               Get in touch
               <i class="fa-solid fa-arrow-right ms-3"></i>
-            </button>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </div>
+  }
 </section>

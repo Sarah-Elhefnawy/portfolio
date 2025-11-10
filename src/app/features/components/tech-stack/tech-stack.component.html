@@ -1,164 +1,317 @@
 <section class="text-white md:space-y-14 py-8">
-    <div class="pb-16">
-        <h1 class="font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-tight">
-            Tech Stack
-        </h1>
-        <p class="text-base text-gray-300 sm:text-lg md:text-xl lg:text-2xl leading-relaxed">
-            The dev tools, and apps I use.
-        </p>
+  @if(ready == false){
+
+  <!-- Headers -->
+  <div role="status" class="animate-pulse py-8">
+    <div
+      class="h-2.5 bg-neutral-700/50 rounded-full max-w-[640px] mb-2.5"
+    ></div>
+    <div class="h-2.5 bg-neutral-700/50 rounded-full max-w-[540px]"></div>
+    <span class="sr-only">Loading...</span>
+  </div>
+
+  <!-- Content -->
+  <div class="my-4">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      @for(item of [0,0,0,0,0,0,0,0];track $index){
+      <div
+        role="status"
+        class="animate-pulse bg-neutral-700/50 flex items-center justify-center p-6 rounded-xl"
+      >
+        <svg
+          class="w-10 h-10 text-neutral-600/50"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 16 20"
+        >
+          <path
+            d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z"
+          />
+          <path
+            d="M14.066 0H7v5a2 2 0 0 1-2 2H0v11a1.97 1.97 0 0 0 1.934 2h12.132A1.97 1.97 0 0 0 16 18V2a1.97 1.97 0 0 0-1.934-2ZM9 13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2Zm4 .382a1 1 0 0 1-1.447.894L10 13v-2l1.553-1.276a1 1 0 0 1 1.447.894v2.764Z"
+          />
+        </svg>
+        <span class="sr-only">Loading...</span>
+      </div>
+      }
     </div>
+  </div>
 
-    <div class="my-4">
-        <h2 class="my-6 text-3xl md:text-4xl font-extrabold">Dev Tools</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            <!-- Angular -->
-            <div class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                <img class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
-                    src="./Tools/angular logo.png" alt="Angular">
-                <div class="text-center">
-                    <h5 class="text-lg font-medium">Angular</h5>
-                </div>
-            </div>
+  <div class="my-4">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      @for(item of [0,0,0,0,0,0,0,0];track $index){
+      <div
+        role="status"
+        class="animate-pulse bg-neutral-700/50 flex items-center justify-center p-6 rounded-xl"
+      >
+        <svg
+          class="w-10 h-10 text-neutral-600/50"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 16 20"
+        >
+          <path
+            d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z"
+          />
+          <path
+            d="M14.066 0H7v5a2 2 0 0 1-2 2H0v11a1.97 1.97 0 0 0 1.934 2h12.132A1.97 1.97 0 0 0 16 18V2a1.97 1.97 0 0 0-1.934-2ZM9 13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2Zm4 .382a1 1 0 0 1-1.447.894L10 13v-2l1.553-1.276a1 1 0 0 1 1.447.894v2.764Z"
+          />
+        </svg>
+        <span class="sr-only">Loading...</span>
+      </div>
+      }
+    </div>
+  </div>
 
-            <!-- Tailwind -->
-            <div class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                <img class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
-                    src="./Tools/tailwind logo.png" alt="Tailwind">
-                <div class="text-center">
-                    <h5 class="text-lg font-medium">Tailwind</h5>
-                </div>
-            </div>
+  }@else {
 
-            <!-- TypeScript -->
-            <div class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                <img class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
-                    src="./Tools/typescript_original_logo_icon_146317.png" alt="TypeScript">
-                <div class="text-center">
-                    <h5 class="text-lg font-medium">TypeScript</h5>
-                </div>
-            </div>
+  <div class="pb-16">
+    <h1
+      class="font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-tight"
+    >
+      Tech Stack
+    </h1>
+    <p
+      class="text-base text-gray-300 sm:text-lg md:text-xl lg:text-2xl leading-relaxed"
+    >
+      The dev tools, and apps I use.
+    </p>
+  </div>
 
-            <!-- Bootstrap -->
-            <div class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                <img class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
-                    src="./Tools/bootstrap_plain_logo_icon_146619.png" alt="Bootstrap">
-                <div class="text-center">
-                    <h5 class="text-lg font-medium">Bootstrap</h5>
-                </div>
-            </div>
-
-            <!-- jQuery -->
-            <div class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                <img class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
-                    src="./Tools/jquery_original_wordmark_logo_icon_146447.png" alt="jQuery">
-                <div class="text-center">
-                    <h5 class="text-lg font-medium">jQuery</h5>
-                </div>
-            </div>
-
-            <!-- NPM -->
-            <div class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                <img class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
-                    src="./Tools/npm_original_wordmark_logo_icon_146402 (1).png" alt="NPM">
-                <div class="text-center">
-                    <h5 class="text-lg font-medium">NPM</h5>
-                </div>
-            </div>
-
-            <!-- SASS -->
-            <div class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                <img class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
-                    src="./Tools/sass_original_logo_icon_146350.png" alt="SASS">
-                <div class="text-center">
-                    <h5 class="text-lg font-medium">SASS</h5>
-                </div>
-            </div>
-
-            <!-- C# -->
-            <div class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                <img class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
-                    src="./Tools/csharp_original_logo_icon_146578.png" alt="C#">
-                <div class="text-center">
-                    <h5 class="text-lg font-medium">C#</h5>
-                </div>
-            </div>
+  <div class="my-4">
+    <h2 class="my-6 text-3xl md:text-4xl font-extrabold">Dev Tools</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Angular -->
+      <div
+        class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+      >
+        <img
+          class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
+          src="./Tools/angular logo.png"
+          alt="Angular"
+        />
+        <div class="text-center">
+          <h5 class="text-lg font-medium">Angular</h5>
         </div>
-    </div>
+      </div>
 
-    <div class="my-4">
-        <h2 class="my-6 text-3xl md:text-4xl font-extrabold">Apps</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            <!-- Figma -->
-            <div class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                <img class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
-                    src="./Apps/Icon.png" alt="Figma">
-                <div class="text-center">
-                    <h5 class="text-lg font-medium">Figma</h5>
-                </div>
-            </div>
-
-            <!-- VSCode -->
-            <div class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                <img class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
-                    src="./Apps/file_type_vscode_icon_130084.png" alt="VSCode">
-                <div class="text-center">
-                    <h5 class="text-lg font-medium">VSCode</h5>
-                </div>
-            </div>
-
-            <!-- Netlify -->
-            <div class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                <img class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
-                    src="./Apps/Netlify.png" alt="Netlify">
-                <div class="text-center">
-                    <h5 class="text-lg font-medium">Netlify</h5>
-                </div>
-            </div>
-
-            <!-- Obsidian -->
-            <div class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                <img class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
-                    src="./Apps/obsidian-1330289847831211775_512px.icns" alt="Obsidian">
-                <div class="text-center">
-                    <h5 class="text-lg font-medium">Obsidian</h5>
-                </div>
-            </div>
-
-            <!-- Notion -->
-            <div class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                <img class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
-                    src="./Apps/idzPHWF4i2_1759173026520.png" alt="Notion">
-                <div class="text-center">
-                    <h5 class="text-lg font-medium">Notion</h5>
-                </div>
-            </div>
-
-            <!-- LinkedIn -->
-            <div class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                <img class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
-                    src="./Apps/linkedin_socialnetwork_17441.png" alt="LinkedIn">
-                <div class="text-center">
-                    <h5 class="text-lg font-medium">LinkedIn</h5>
-                </div>
-            </div>
-
-            <!-- Postman -->
-            <div class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                <img class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
-                    src="./Apps/postman_macos_bigsur_icon_189815.png" alt="Postman">
-                <div class="text-center">
-                    <h5 class="text-lg font-medium">Postman</h5>
-                </div>
-            </div>
-
-            <!-- Fork -->
-            <div class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                <img class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
-                    src="./Apps/fork logo.jpeg" alt="Fork">
-                <div class="text-center">
-                    <h5 class="text-lg font-medium">Fork</h5>
-                </div>
-            </div>
+      <!-- Tailwind -->
+      <div
+        class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+      >
+        <img
+          class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
+          src="./Tools/tailwind logo.png"
+          alt="Tailwind"
+        />
+        <div class="text-center">
+          <h5 class="text-lg font-medium">Tailwind</h5>
         </div>
+      </div>
+
+      <!-- TypeScript -->
+      <div
+        class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+      >
+        <img
+          class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
+          src="./Tools/typescript_original_logo_icon_146317.png"
+          alt="TypeScript"
+        />
+        <div class="text-center">
+          <h5 class="text-lg font-medium">TypeScript</h5>
+        </div>
+      </div>
+
+      <!-- Bootstrap -->
+      <div
+        class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+      >
+        <img
+          class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
+          src="./Tools/bootstrap_plain_logo_icon_146619.png"
+          alt="Bootstrap"
+        />
+        <div class="text-center">
+          <h5 class="text-lg font-medium">Bootstrap</h5>
+        </div>
+      </div>
+
+      <!-- jQuery -->
+      <div
+        class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+      >
+        <img
+          class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
+          src="./Tools/jquery_original_wordmark_logo_icon_146447.png"
+          alt="jQuery"
+        />
+        <div class="text-center">
+          <h5 class="text-lg font-medium">jQuery</h5>
+        </div>
+      </div>
+
+      <!-- NPM -->
+      <div
+        class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+      >
+        <img
+          class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
+          src="./Tools/npm_original_wordmark_logo_icon_146402 (1).png"
+          alt="NPM"
+        />
+        <div class="text-center">
+          <h5 class="text-lg font-medium">NPM</h5>
+        </div>
+      </div>
+
+      <!-- SASS -->
+      <div
+        class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+      >
+        <img
+          class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
+          src="./Tools/sass_original_logo_icon_146350.png"
+          alt="SASS"
+        />
+        <div class="text-center">
+          <h5 class="text-lg font-medium">SASS</h5>
+        </div>
+      </div>
+
+      <!-- C# -->
+      <div
+        class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+      >
+        <img
+          class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
+          src="./Tools/csharp_original_logo_icon_146578.png"
+          alt="C#"
+        />
+        <div class="text-center">
+          <h5 class="text-lg font-medium">C#</h5>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="my-4">
+    <h2 class="my-6 text-3xl md:text-4xl font-extrabold">Apps</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Figma -->
+      <div
+        class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+      >
+        <img
+          class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
+          src="./Apps/Icon.png"
+          alt="Figma"
+        />
+        <div class="text-center">
+          <h5 class="text-lg font-medium">Figma</h5>
+        </div>
+      </div>
+
+      <!-- VSCode -->
+      <div
+        class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+      >
+        <img
+          class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
+          src="./Apps/file_type_vscode_icon_130084.png"
+          alt="VSCode"
+        />
+        <div class="text-center">
+          <h5 class="text-lg font-medium">VSCode</h5>
+        </div>
+      </div>
+
+      <!-- Netlify -->
+      <div
+        class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+      >
+        <img
+          class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
+          src="./Apps/Netlify.png"
+          alt="Netlify"
+        />
+        <div class="text-center">
+          <h5 class="text-lg font-medium">Netlify</h5>
+        </div>
+      </div>
+
+      <!-- Obsidian -->
+      <div
+        class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+      >
+        <img
+          class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
+          src="./Apps/obsidian-1330289847831211775_512px.icns"
+          alt="Obsidian"
+        />
+        <div class="text-center">
+          <h5 class="text-lg font-medium">Obsidian</h5>
+        </div>
+      </div>
+
+      <!-- Notion -->
+      <div
+        class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+      >
+        <img
+          class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
+          src="./Apps/idzPHWF4i2_1759173026520.png"
+          alt="Notion"
+        />
+        <div class="text-center">
+          <h5 class="text-lg font-medium">Notion</h5>
+        </div>
+      </div>
+
+      <!-- LinkedIn -->
+      <div
+        class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+      >
+        <img
+          class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
+          src="./Apps/linkedin_socialnetwork_17441.png"
+          alt="LinkedIn"
+        />
+        <div class="text-center">
+          <h5 class="text-lg font-medium">LinkedIn</h5>
+        </div>
+      </div>
+
+      <!-- Postman -->
+      <div
+        class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+      >
+        <img
+          class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
+          src="./Apps/postman_macos_bigsur_icon_189815.png"
+          alt="Postman"
+        />
+        <div class="text-center">
+          <h5 class="text-lg font-medium">Postman</h5>
+        </div>
+      </div>
+
+      <!-- Fork -->
+      <div
+        class="group flex flex-col items-center p-6 cursor-pointer bg-neutral-900/80 hover:bg-neutral-800/90 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+      >
+        <img
+          class="object-cover w-20 h-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300"
+          src="./Apps/fork logo.jpeg"
+          alt="Fork"
+        />
+        <div class="text-center">
+          <h5 class="text-lg font-medium">Fork</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  }
 </section>
